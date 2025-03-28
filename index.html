@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,48 +36,59 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 16px;
-            cursor: pointer;
-            border: none;
         }
         .btn:hover {
             background-color: #2ea043;
         }
-        .social-links {
+        .gift-section {
+            margin-top: 40px;
+        }
+        .claim-section {
             margin-top: 30px;
         }
-        .social-links a {
-            color: #58a6ff;
+        .claim-btn {
+            padding: 12px 24px;
             font-size: 18px;
-            text-decoration: none;
-            margin: 10px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .social-links a:hover {
-            text-decoration: underline;
+        .claim-btn:hover {
+            background-color: #e68900;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <div class="logo">Miwold Crypto Hub</div>
         <p class="description">The future of decentralized commerce starts here. We accept Crypto from around the world.</p>
         <p>Send me 1$ gift. I will return 2$ gift instantly.</p>
         <p><strong>Address:</strong> TM27gWR5zhdih9o1oSvEvHPj4XUHnwnfSB</p>
+        <a href="https://github.com/MiwoldCrypto" class="btn">Gift 1$ Crypto</a>
+    </div>
 
-        <button class="btn" onclick="openGiftPage()">Gift 1$ Crypto</button>
+    <div class="container">
+        <a href="return-claim-form.html" class="btn">Return Claim</a>
+    </div>
 
-        <div class="social-links">
-            <h3>Follow Us:</h3>
-            <a href="https://x.com/patelmustajib?t=VkEagpBYHVrxrrFC8Cnd4Q&s=09" target="_blank">Twitter</a>
-            <a href="https://www.instagram.com/mohammedmustajabpatel?igsh=aTFmYmRkOTJscHpk" target="_blank">Instagram</a>
-        </div>
+    <div class="container">
+        <img src="gift.jpg" alt="Gift Image" width="300">
+        <h2>Fill Out This Form</h2>
+    </div>
+
+    <div class="container claim-section">
+        <h2>Claim Your Dollar</h2>
+        <button id="claimButton" class="claim-btn">Claim Now</button>
     </div>
 
     <script>
-        function openGiftPage() {
-            window.open('gift.html', '_blank');
-        }
+        document.getElementById("claimButton").addEventListener("click", function() {
+            window.open("https://forms.gle/oLRCFnie6129yvNx6", "_blank");
+        });
     </script>
 
 </body>
 </html>
+
